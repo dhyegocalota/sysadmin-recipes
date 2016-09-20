@@ -17,7 +17,7 @@ I only did this on purpose to take my own recipes and annotations in a structure
 - [x] ufw
 - [ ] fail2ban
 - [ ] logwatch
-- [ ] logrotate
+- [x] logrotate
 - [ ] rvm
 - [ ] nvm
 - [x] monit
