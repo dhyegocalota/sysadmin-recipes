@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 source start-common
 
-ruby -S foreman start worker
+ruby -S foreman start worker >> $LOG 2>&1

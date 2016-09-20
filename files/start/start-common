@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+LOG=/dev/null
 DEBUG=false
 
 NONE='\033[0m'
@@ -17,7 +18,7 @@ ok() { green "✔ $1"; }
 info() { printf "●  $1"; }
 debug() { if $DEBUG; then info "$1"; fi }
 
-usage() { info "Options available (-d|--directory,-e|--env,--debug)"; exit; }
+usage() { info "Options available (-d|--directory,-e|--env,-l|--log,--debug)"; exit; }
 
 while [[ $# -gt 1 ]]; do
   key="$1"
@@ -30,6 +31,10 @@ while [[ $# -gt 1 ]]; do
       ;;
     -e|--env)
       ENV="$2"
+      shift
+      ;;
+    -l|--log)
+      LOG="$2"
       shift
       ;;
     --debug)
