@@ -4,6 +4,12 @@ I only did this on purpose to take my own recipes and annotations in a structure
 ### Firewall
 - [UFW](https://github.com/dhyegofernando/sysadmin-recipes/blob/master/ufw.md)
 
+### Monitoring
+- [Monit](https://github.com/dhyegofernando/sysadmin-recipes/blob/master/monit.md)
+
+### WebServers
+- [Nginx](https://github.com/dhyegofernando/sysadmin-recipes/blob/master/nginx.md)
+
 ## TODO
 - [ ] unattended-upgrades
 - [ ] apticron
@@ -13,7 +19,8 @@ I only did this on purpose to take my own recipes and annotations in a structure
 - [ ] logwatch
 - [ ] rvm
 - [ ] nvm
-- [ ] monit
+- [x] monit
+- [ ] apache
 - [x] nginx
 - [ ] mysql
 - [ ] redis
