@@ -6,7 +6,10 @@
 ```
 
 ## Usage
-**Set your /etc/nginx/nginx.conf**
+**Set your nginx conf**
+```bash
+# vim /etc/nginx/nginx.conf
+```
 ```conf
 user www-data www-data;
 worker_processes 1;
@@ -87,6 +90,9 @@ http {
 ```
 
 **Create your virtual host (like this for example)**
+```bash
+# vim /etc/nginx/sites-available/escritoriovirtual
+```
 ```conf
 upstream app {
         server localhost:3000;
@@ -125,4 +131,9 @@ server {
                 break;
         }
 }
+```
+
+**Enable your virtual host**
+```bash
+# ln -s /etc/nginx/sites-available/escritoriovirtual /etc/nginx/sites-enabled/
 ```
