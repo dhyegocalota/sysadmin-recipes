@@ -4,6 +4,9 @@ I only did this on purpose to take my own recipes and annotations in a structure
 ### Firewall
 - [UFW](https://github.com/dhyegofernando/sysadmin-recipes/blob/master/ufw.md)
 
+### Logging
+- [LogRotate](https://github.com/dhyegofernando/sysadmin-recipes/blob/master/logrotate.md)
+
 ### Monitoring
 - [Monit](https://github.com/dhyegofernando/sysadmin-recipes/blob/master/monit.md)
 
