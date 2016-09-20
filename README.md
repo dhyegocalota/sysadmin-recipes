@@ -13,6 +13,7 @@ I only did this on purpose to take my own recipes and annotations in a structure
 - [ ] logwatch
 - [ ] rvm
 - [ ] nvm
+- [ ] monit
 - [x] nginx
 - [ ] mysql
 - [ ] redis
