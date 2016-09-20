@@ -28,7 +28,7 @@ I only did this on purpose to take my own recipes and annotations in a structure
 - [ ] elasticsearch
 
 ## Last Update
-*1st movie at 1:34:41*
+*2st movie at 2:33:10 (backup strategies)*
 
 ## License
 MIT
