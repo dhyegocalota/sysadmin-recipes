@@ -11,6 +11,12 @@ I only did this on purpose to take my own recipes and annotations in a structure
 - [x] ufw
 - [ ] fail2ban
 - [ ] logwatch
+- [ ] rvm
+- [ ] nvm
+- [x] nginx
+- [ ] mysql
+- [ ] redis
+- [ ] elasticsearch
 
 ## Last Update
 *1st movie at 1:34:41*

@@ -1,0 +1,4 @@
+#!/bin/bash --login
+source start-common
+
+ruby -S foreman start web

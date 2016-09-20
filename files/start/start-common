@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -e
+
+DEBUG=false
+
+NONE='\033[0m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+
+colored() { printf "$1$2${NONE}"; }
+red() { colored "$RED" "$1"; }
+green() { colored "$GREEN" "$1"; }
+
+error() { red "✗ $1" >&2; }
+die() { error "$1"; exit 111; }
+ok() { green "✔ $1"; }
+info() { printf "●  $1"; }
+debug() { if $DEBUG; then info "$1"; fi }
+
+usage() { info "Options available (-d|--directory,-e|--env,--debug)"; exit; }
+
+while [[ $# -gt 1 ]]; do
+  key="$1"
+
+  case "$key" in
+    -d|--directory)
+      DIRECTORY="$2"
+      ENV="$DIRECTORY/.env"
+      shift
+      ;;
+    -e|--env)
+      ENV="$2"
+      shift
+      ;;
+    --debug)
+      DEBUG=true
+      shift
+      ;;
+    --)
+      shift
+      break
+      ;;
+    *)
+      ;;
+  esac
+
+  shift
+done
+
+if [[ -z "$DIRECTORY" || -z "$ENV" ]]; then usage; fi
+if [[ ! -d "$DIRECTORY" ]]; then die "'$DIRECTORY' is not a directory\n"; fi
+if [[ ! -f "$ENV" ]]; then die "'$ENV' is not a file\n"; fi
+
+debug "Sourcing '$ENV' file"
+source $ENV
+
+debug "Entering '$ENV' file"
+cd $DIRECTORY
